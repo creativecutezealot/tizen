@@ -1,8 +1,8 @@
 var appDefaults = {
 	platform: "samsung",
-	appKey: "rFZstmGa5DLUM-GYNJP8UXe-FET9x5Rv7mWWMxnxYs-ZirIs93fLrRwsaya1vVc8",
-	clientId: "c17f5da7118d71ac0746e82aae4e10abfcca3e6e2df04a1f6f07f570f17f6482",
-	clientSecret: "e40f20e5a4a638a6ce5575d91f52f68a1448bcb64c387210cb5cd7ab257c1ad2",
+	appKey: "",
+	clientId: "",
+	clientSecret: "",
 	rootPlaylistId: "5eebdf55f6776a00010e4adc",
 	displayName: "OFTV",
 	theme: "dark-theme",
