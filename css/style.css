@@ -1,0 +1,92 @@
+* {
+    font-family: Roboto, Helvetica, Arial, Verdana, sans-serif;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#app-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#app-container.dark-theme {
+  background-color: #000000;
+}
+
+#app-container.light-theme {
+  background-color: #ffffff;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.large-thumbnail-container {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    z-index: 0
+}
+
+.large-thumbnail {
+    position: relative;
+    max-width: 60%;
+    width: 60%;
+    height: auto;
+    top: 0;
+    left: 40%;
+    z-index: inherit;
+}
+
+.large-thumbnail-overlay-container {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+}
+
+.large-thumbnail-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+}
+
+.ellipsis-text {
+    white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.full-screen-view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+
+.full-height {
+	height: 100%;
+	max-height: 100%;
+}
+
+.center-content-vertically {
+	display: flex;
+	align-items: center;
+}

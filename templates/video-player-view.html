@@ -1,0 +1,17 @@
+<script id="video-player-view-template" type="text/x-handlebars-template">
+    <video
+      id="{{ css.ids.id }}"
+      class="video-js vjs-default-skin"
+      width="{{ width }}"
+      height="{{ height }}"
+      poster="{{ thumbnail }}"
+      controls>
+      {{#ifCond videoType "==" "hls" }}
+          <source src="{{ videoUrl }}" type="application/x-mpegURL"/>
+      {{/ifCond}}
+
+      {{#ifCond videoType "!=" "hls" }}
+          <source src="{{ videoUrl }}" type="video/{{ videoType }}"/>
+      {{/ifCond}}
+    </video>
+</script>

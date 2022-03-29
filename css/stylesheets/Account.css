@@ -1,0 +1,72 @@
+.account-view.dark-theme {
+	background-color: #000000;
+}
+.account-view.light-theme {
+	background-color: #ffffff;
+}
+
+/* .account-view .account-header,
+.account-view .account-email, */
+.account-view .account-header.button {
+	text-align: center;
+}
+
+.account-view .account-header {
+	font-size: 4em;
+	font-weight: bold;
+
+	/* margin-top: 20%; */
+	max-height: 10%;
+}
+
+.account-view .account-header.dark-theme,
+.account-view .account-email.dark-theme {
+	color: #ffffff;
+}
+.account-view .account-header.light-theme,
+.account-view .account-email.light-theme {
+	color: #000000;
+}
+
+.account-view .account-email {
+	font-size: 2.5em;
+	font-weight: bold;
+
+	margin-top: 2.5%;
+	max-height: 10%;
+}
+
+.account-view .app-icon-row {
+	margin-top: 5%;
+}
+
+.account-view .app-icon {
+	display: block;
+	max-width: 30%;
+}
+
+.account-view .buttons-container .container {
+	padding-top: 10%;
+}
+
+.account-view .buttons-container .container.dark-theme .button {
+	color: #ffffff;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+
+	padding: 0.25em;
+
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.account-view .buttons-container .container.dark-theme .button.focused {
+	border: 0.1em solid #ffffff;
+	border-radius: 0.2em;
+
+	background-color: rgba(256, 256, 256, 0.8);
+	color: #000000;
+
+	font-size: 2.25em;
+}

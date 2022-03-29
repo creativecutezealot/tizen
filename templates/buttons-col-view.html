@@ -1,0 +1,11 @@
+<script id="buttons-col-template" type="text/x-handlebars-template">
+	<div class="col-sm container {{ css.classes.theme }}">
+			{{#each buttons}}
+			<div class="row button-container">
+				<div class="col-sm-3 button" index="{{index}}" role="{{role}}">
+					{{title}}
+				</div>
+			</div>
+			{{/each}}
+		</div>
+</script>

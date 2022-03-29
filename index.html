@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Tizen TV basic template powered by Zype" />
+
+  <title>Powered by Zype</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/video-js.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Spinner.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/AppIcon.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/MediaGrid.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Slider.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/VideoDetails.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Dialog.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/VideoPlayer.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/CredentialsInput.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Navigation.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Account.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/ConfirmDialog.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Search.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Purchase.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheets/Favorites.css" />
+
+  <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+</head>
+
+<body>
+  <div id="app-container">
+    <div id="media-grid-container"></div>
+    <div id="media-grid-slider-container"></div>
+    <div id="video-details-container"></div>
+    <div id="video-player-container"></div>
+    <div id="credentials-input-container"></div>
+    <div id="search-container"></div>
+    <div id="purchase-container"></div>
+    <div id="favorites-container"></div>
+
+    <div id="dialogs-container"></div>
+    <div id="navs-container"></div>
+    <div id="account-container"></div>
+    <div id="confirm-dialogs-container"></div>
+  </div>
+
+  <object type="application/avplayer" id="zype-video-player"></object>
+
+  <!-- App overlay with spinner -->
+  <div id="app-overlay" class="app-overlay-container">
+    <div id="overlay-message" class="app-overlay-message"></div>
+  </div>
+  <div id="app-loading-spinner" class="content-load-spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+  <div class="network-status-text-container">
+    <p class="network-status-text">Disconnected from network. Waiting for reconnection...</p>
+  </div>
+  <div id="splash-image-container">
+    <img id="splash-image" src="assets/images/splash-image.png" alt="Splash Image">
+  </div>
+
+  <!-- attach templates to template loader -->
+  <div id="template-loader"></div>
+
+  <script src="configs/defaults.js"></script>
+  <script src="lib/jquery.js"></script>
+
+  <script type="text/javascript">
+    $(".app-overlay-container").addClass(appDefaults.theme);
+    $(".network-status-text").addClass(appDefaults.theme);
+    $("#app-loading-spinner.content-load-spinner").css('border-top-color', appDefaults.brandColor);
+  </script>
+
+  <script src="lib/video.min.js"></script>
+  <script src="lib/videojs-contrib-hls.js"></script>
+  <script src="js/helpers/object-helpers.js"></script>
+
+  <script src="lib/handlebars.min.js"></script>
+  <script src="lib/handlebars-helpers.js"></script>
+  <script src="lib/hmac-sha256.js"></script>
+  <script src="lib/enc-base64-min.js"></script>
+  <script src="lib/utils.js"></script>
+  <script src="lib/template-loader.js"></script>
+  <script src="lib/load-platform.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

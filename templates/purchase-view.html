@@ -1,0 +1,82 @@
+<script id="purchase-view-template" type="text/x-handlebars-template">
+  <div class="purchase-view full-screen-view invisible {{ css.classes.theme }}" id="{{ css.ids.id }}">
+
+    <div class="app-icon-container">
+      <img class="app-icon" src="{{ images.appIcon }}" alt="App Icon"/>
+    </div>
+
+    <div class="purchase-text">
+      <h1 class="purchase-header {{ css.classes.theme }}">{{ text.header }}</h1>
+      <p class="purchase-description {{ css.classes.theme }}">{{{ text.description }}}</p>
+    </div>
+
+    <!-- Samsung Checkout products -->
+    <!-- Note: if using for other platforms, code may need refactoring -->
+    <div class="purchase-options">
+      {{#each products}}
+      <div class="product {{ ../css.classes.theme }}">
+        <h1 class="text">
+          {{ ItemTitle }}
+          <br>
+          <br>
+
+          {{#ifCond ItemType "==" 4 }}
+            <!-- Subscription Product -->
+            {{#ifCond CurrencyID "==" "USD"}}
+            Subscribe - $ {{ Price }}
+            {{/ifCond}}
+            {{#ifCond CurrencyID "!=" "USD"}}
+            Subscribe - {{ Price }} {{ CurrencyID }}
+            {{/ifCond}}
+
+            {{#ifCond SubscriptionInfo.freeTrialDayCount "!=" null }}
+              {{#ifCond SubscriptionInfo.freeTrialDayCount ">" 0}}
+              <!-- Free Trail -->
+              <br>After {{ SubscriptionInfo.freeTrialDayCount }}-Day Trial
+              {{/ifCond}}
+            {{/ifCond}}
+          {{/ifCond}}
+
+          {{#ifCond ItemType "!=" 4 }}
+            <!-- Non-subscription Product -->
+            Purchase - {{ Price }} {{ CurrencyID }}
+          {{/ifCond}}
+        </h1>
+      </div>
+      {{/each}}
+    </div>
+
+    <!-- Already signed in - show email -->
+    <div class="signed-in-container container invisible">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="signedin-text {{ css.classes.theme }}">{{ text.signedInText }}</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="email {{ css.classes.theme }}"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign in text -->
+    <div class="signin-text-container container invisible">
+      <div class="row">
+        <div class="col-sm-8 no-padding">
+          <p class="signin-text {{ css.classes.theme }}">{{ text.signInText }}</p>
+        </div>
+        <div class="col-sm-4 no-padding">
+          <p class="signin-button {{ css.classes.theme }}">{{ text.signInButton }}</p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .purchase-options .product.focused {
+        border: 0.5em solid {{ css.brandColor }};
+      }
+      .signin-text-container .signin-button.focused {
+        color: {{ css.brandColor }};
+      }
+    </style>
+  </div>
+</script>

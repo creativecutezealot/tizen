@@ -1,0 +1,29 @@
+<script id="confirm-dialog-view-template" type="text/x-handlebars-template">
+	<div class="confirm-dialog-view full-screen-view invisible {{ css.classes.theme }}" id="{{ css.ids.id }}">
+
+		<div class="confirm-dialog-container {{ css.classes.theme }}">
+			<div class="fluid-container full-height">
+				<!-- Confirm Dialog Text -->
+				<div class="row confirm-dialog-text center-content-vertically {{ css.classes.theme }}">
+					<div class="col-sm-8 col-sm-offset-2">{{ text }}</div>
+				</div>
+
+				<!-- Confirm Dialog Buttons -->
+				<div class="row confirm-dialog-buttons-row container-fluid">
+					<div class="row full-height">
+						<!-- Confirm Button -->
+						<div class="col-sm-2 col-sm-offset-6 full-height center-content-vertically confirm-dialog-button dialog-confirm-button {{ css.classes.theme }}">
+							<span class="button-text">{{ confirmText }}</span>
+						</div>
+
+						<!-- Cancel Button -->
+						<div class="col-sm-2 col-sm-offset-1 full-height center-content-vertically confirm-dialog-button dialog-cancel-button {{ css.classes.theme }}">
+							<span class="button-text">{{ cancelText }}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</script>

@@ -1,0 +1,50 @@
+<script id="search-view-template" type="text/x-handlebars-template">
+  <div class="search-view full-screen-view invisible {{ css.classes.theme }}" id="{{ css.ids.id }}">
+    <!-- <div class="header-container">
+      <h1 class="header {{ css.classes.theme }}">Search</h1>
+    </div> -->
+
+    <div class="query-container">
+      <input type="text" maxlength="20" align="bottom" name="query" class="query-input {{ css.classes.theme }}" placeholder="Search"/>
+    </div>
+
+    <!-- Videos search container - empty initially -->
+    <div class="videos-container"></div>
+
+    <div class="video-results-container">
+      <h3 class="video-results {{ css.classes.theme }}"></h3>
+    </div>
+  </div>
+
+  <style>
+    .search-view .videos-container .video.focused {
+      border: solid 0.5em {{ css.brandColor }};
+    }
+    .search-view input.query-input.highlight {
+      border: solid 0.2em {{ css.brandColor }};
+    }
+    .search-view .query-container {
+      top: {{ css.positions.queryContainer.top }};
+      height: {{ css.positions.queryContainer.height }};
+    }
+    .search-view .videos-container {
+      top: {{ css.positions.videoContainer.top }};
+      width: {{ css.positions.videoContainer.width }};
+      height: {{ css.positions.videoContainer.height }};
+    }
+    .search-view .video-results-container {
+      top: {{ css.positions.videoResultsContainer.top }};
+      left: {{ css.positions.videoResultsContainer.left }};
+    }
+  </style>
+</script>
+
+<script id="search-videos-template" type="text/x-handlebars-template">
+  <!-- Display of search videos -->
+  {{#each videos}}
+  <div class="video">
+    <img class="video-thumbnail" src="{{imgUrl}}" />
+    <h2 class="video-title ellipsis-text {{ ../css.classes.theme }}">{{ title }}</h2>
+  </div>
+  {{/each}}
+</script>

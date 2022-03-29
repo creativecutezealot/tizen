@@ -1,0 +1,131 @@
+.video-details-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-details-text-container {
+    position: absolute;
+    width: 40%;
+    max-width: 40%;
+    height: 50%;
+    max-height: 50%;
+    top: 15%;
+    left: 0;
+    padding-left: 7.5%;
+    z-index: 15;
+}
+
+.video-details-title-container {
+    max-width: 100%;
+    max-height: 40%;
+}
+
+.video-details-description-container {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.video-details-title {
+    z-index: 50;
+    font-size: 3.5em;
+}
+
+.video-details-title.ellipsis-text {
+    /* overwrite white-space from .ellipsis-text */
+    white-space: inherit;
+    display: block;
+    display: -webkit-box;
+
+    /* cut off after 3 lines */
+    height: 4.5em;
+    line-height: 1.5em;
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+}
+
+.video-details-description {
+    font-size: 2em;
+}
+
+.video-details-description.focused.dark-theme {
+	border: solid 0.2em #00ffff;
+}
+
+.video-details-description.focused.light-theme {
+	border: solid 0.2em #00ffff;
+}
+
+.video-details-description.ellipsis-text {
+    /* overwrite white-space from .ellipsis-text */
+    white-space: inherit;
+    display: block;
+    display: -webkit-box;
+
+    /* cut off after 5 lines */
+    height: 7.5em;
+    line-height: 1.5em;
+    -webkit-line-clamp: 5;
+
+    -webkit-box-orient: vertical;
+}
+
+.video-details-title.dark-theme,
+.video-details-description.dark-theme,
+.video-details-buttons-container .button-text.dark-theme,
+.video-details-buttons-container .button.focused .button-text.light-theme {
+    color: #ffffff;
+}
+
+.video-details-title.light-theme,
+.video-details-description.light-theme,
+.video-details-buttons-container .button-text.light-theme,
+.video-details-buttons-container .button.focused .button-text.dark-theme {
+    color: #000000;
+}
+
+.video-details-buttons-container {
+    position: absolute;
+    width: 45%;
+    max-width: 45%;
+    height: 35%;
+    max-height: 35%;
+    top: 65%;
+    left: 0;
+    padding-left: 7.5%;
+    z-index: 15;
+}
+
+.video-details-buttons-container .button {
+    margin-bottom: 1em;
+    width: 60%;
+    border-radius: 0.25em;
+
+    font-family: Roboto;
+    text-align: center;
+}
+
+.video-details-buttons-container .button.focused.dark-theme {
+    background-color: #ffffff;
+}
+
+.video-details-buttons-container .button.focused.light-theme {
+    background-color: #000000;
+}
+
+.video-details-buttons-container .button-text {
+    font-size: 2em;
+    margin: 0.5em 0em;
+    font-style: bold;
+}
+
+.video-details-buttons-container .button.dark-theme {
+    border: solid 0.2em #ffffff;
+}
+
+.video-details-buttons-container .button.light-theme {
+    border: solid 0.2em #000000;
+}

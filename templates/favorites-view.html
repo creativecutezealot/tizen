@@ -1,0 +1,41 @@
+<script id="favorites-view-template" type="text/x-handlebars-template">
+  <div class="favorites-view {{ css.classes.theme }} invisible" id="{{ css.ids.id }}">
+    <div class="app-icon-container">
+      <img class="app-icon" src="{{ images.appIcon }}" alt="App Icon">
+    </div>
+
+    <div class="header-container">
+      <h1 class="header {{ css.classes.theme }}">{{ labels.header }}</h1>
+    </div>
+
+    <div class="video-favorites-container invisible"></div>
+
+    <div class="favorites-info invisible">
+      <div class="sign-in-button invisible {{ css.classes.theme }}">
+        <h1 class="sign-in-button-text {{ css.classes.theme }}">{{ labels.signInButton }}</h1>
+      </div>
+      <h2 class="helper-message {{ css.classes.theme }}"></h2>
+    </div>
+
+    <!-- dynamic styles -->
+    <style>
+      .sign-in-button {
+        border: solid 1em {{ css.brandColor }};
+        border-radius: 1.25em;
+      }
+      .favorites-view .video-favorites-container .video.focused {
+        border: solid 0.5em {{ css.brandColor }};
+      }
+    </style>
+  </div>
+</script>
+
+<script id="favorite-videos-template" type="text/x-handlebars-template">
+  <!-- Display of favorite videos -->
+  {{#each videos}}
+  <div class="video">
+    <img class="video-thumbnail" src="{{imgUrl}}" />
+    <h2 class="video-title ellipsis-text {{ ../css.classes.theme }}">{{ title }}</h2>
+  </div>
+  {{/each}}
+</script>

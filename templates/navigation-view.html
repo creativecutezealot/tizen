@@ -1,0 +1,16 @@
+<script id="navigation-view-template" type="text/x-handlebars-template">
+  <div class="navigation-view {{ css.classes.theme }} invisible" id="{{ css.ids.id }}">
+
+    <div class="navigation-tabs-container {{ css.classes.theme }} ">
+      {{#each tabs}}
+      <div
+        class="navigation-tab {{ ../css.classes.theme }} "
+        index="{{index}}"
+        role="{{role}}" >
+        <p class="nav-tab-text">{{title}}</p>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</script>

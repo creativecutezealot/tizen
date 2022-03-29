@@ -1,0 +1,38 @@
+<script id="video-player-ui-view-template" type="text/x-handlebars-template">
+    <div id="{{ css.ids.id }}" class="invisible">
+		<div class="video-player-info">
+			<div class="video-player-title-container">
+				<h1 class="video-player-title ellipsis-text">{{ title }}</h1>
+			</div>
+		</div>
+
+		<div class="video-player-controls">
+
+			<div class="video-player-time">
+				<div class="progress-bar-container">
+					<div class="duration-bar">
+						<div class="progress-bar"></div>
+					</div>
+				</div>
+
+				<div class="current-time-container">
+					<p class="current-time">{{ currentTime }}</p>
+				</div>
+
+				<div class="duration-container">
+					<p class="duration">{{ duration }}</p>
+				</div>
+
+				<!-- hide when not scrubbing -->
+				<div class="scrub-container invisible">
+					<img src="{{ ffRwImage }}" class="ff-rw-image" />
+					<p class="scrub-label"></p>
+				</div>
+			</div>
+
+			<div class="play-pause-container">
+				<img src="{{ playPauseImage }}" class="play-pause-image" />
+			</div>
+		</div>
+	</div>
+</script>

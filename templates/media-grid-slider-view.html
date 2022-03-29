@@ -1,0 +1,73 @@
+<script id="media-grid-slider-view-template" type="text/x-handlebars-template">
+  <div class="media-grid-view {{ css.classes.theme }} invisible" id="{{ css.ids.id }}">
+    <div class="sliders-container">
+      {{#each sliders}}
+        <div class="slider">
+          <img class="slider-img" src="{{imgUrl}}" />
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="media-grid-rows-window">
+      <div class="media-grid-rows-container">
+        {{#each rowData}}
+        <div class="media-grid-row {{thumbnailLayout}} ">
+            <div class="media-grid-row-title-container">
+                <h2 class="media-grid-row-title {{ ../css.classes.theme }} ellipsis-text">
+                    {{#ifCond colorObj.playlist_title_font_color "!=" null}}
+                        <!-- playlist title font color -->
+                        <font color="#{{colorObj.playlist_title_font_color}}">{{title}}</font>
+                    {{/ifCond}}
+
+                    {{#ifCond colorObj.playlist_title_font_color "==" null}}
+                        <!-- default -->
+                        {{title}}
+                    {{/ifCond}}
+                </h2>
+            </div>
+
+            {{#ifCond colorObj.playlist_bg_color "!=" null}}
+            <!-- playlist background color -->
+            <div class="media-grid-row-thumbnails-container custom-bg-color {{thumbnailLayout}}" style="background-color: #{{colorObj.playlist_bg_color}};">
+                <style>
+                    .media-grid-row-thumbnails-container.custom-bg-color .media-grid-thumbnail.dark-theme.focused-thumbnail {
+                        border-color: white;
+                    }
+                    .media-grid-row-thumbnails-container.custom-bg-color .media-grid-thumbnail.light-theme.focused-thumbnail {
+                        border-color: black;
+                    }
+                </style>
+            {{/ifCond}}
+
+            {{#ifCond colorObj.playlist_bg_color "==" null}}
+            <!-- default -->
+            <div class="media-grid-row-thumbnails-container {{thumbnailLayout}}">
+            {{/ifCond}}
+                <div class="media-grid-row-thumbnails">
+                    {{#each content}}
+                        <div class="thumbnail-container {{ ../thumbnailLayout }} ">
+                            <img
+                                {{#ifCond ../thumbnailLayout "==" "poster"}}
+                                src="{{posterThumbnailUrl}}"
+                                {{/ifCond}}
+                                {{#ifCond ../thumbnailLayout "!=" "poster"}}
+                                src="{{smallThumbnailUrl}}"
+                                {{/ifCond}}
+                                alt="Small thumbnail for {{title}}"
+                                class="{{ ../../css.classes.theme }} media-grid-thumbnail media-grid-{{../thumbnailLayout}}-thumbnail" />
+                            {{#ifCond ../../showThumbnailTitles "==" true }}
+                                <h2 class="video-title ellipsis-text {{ ../../css.classes.theme }}">{{ title }}</h2>
+                            {{/ifCond}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+
+  </div>
+
+</script>

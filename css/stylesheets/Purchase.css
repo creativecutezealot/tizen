@@ -1,0 +1,123 @@
+/* Basic colors */
+.purchase-view.dark-theme {
+  background-color: black;
+}
+.purchase-view.light-theme {
+  background-color: white;
+}
+
+.purchase-header.dark-theme,
+.purchase-description.dark-theme,
+.signed-in-container .signedin-text.dark-theme,
+.signed-in-container .email.dark-theme,
+.signin-text.dark-theme,
+.signin-button.dark-theme {
+  color: white;
+}
+.purchase-header.light-theme,
+.purchase-description.light-theme,
+.signed-in-container .signedin-text.light-theme,
+.signed-in-container .email.light-theme,
+.signin-text.light-theme,
+.signin-button.light-theme {
+  color: black;
+}
+
+/* Text */
+.purchase-text {
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  top: 15%;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Products */
+.purchase-view .purchase-options {
+  position: absolute;
+  height: 25%;
+  width: 30%;
+  top: 40%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin: 0% 0% 0% 35%;
+}
+
+.purchase-options .product {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0% 10% 0% 0%;
+
+  text-align: center;
+  display: table;
+}
+
+.purchase-options .product .text {
+  margin: 0 auto;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.purchase-options .product.dark-theme {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.purchase-options .product.light-theme {
+  background-color: rgba(0, 0, 0, 0.7);;
+}
+
+/* Sign in / Signed in */
+.signin-text-container {
+  position: absolute;
+  height: 10%;
+  width: 30%;
+  top: 60%;
+  left: 35%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.signin-text-container,
+.signed-in-container {
+  position: absolute;
+  height: 10%;
+  width: 30%;
+  top: 70%;
+  left: 35%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.signin-text-container .signin-text,
+.signin-text-container .signin-button {
+  padding: 0.5em;
+}
+
+/* .purchase-view .app-icon-container {
+  height: 20%;
+  text-align: center;
+}
+.purchase-view .app-icon-container .app-icon {
+  position: relative;
+  top: -10%;
+  left: -5%;
+} */
+
+.purchase-view .signin-text-container {
+  text-align: center;
+  vertical-align: middle;
+}
+.purchase-view .signin-text-container .signin-text,
+.purchase-view .signed-in-container .signedin-text {
+  float: right;
+}
+.purchase-view .signin-text-container .signin-button,
+.purchase-view .signed-in-container .email {
+  float: left;
+}
+
+.no-padding {
+  padding: 0;
+}

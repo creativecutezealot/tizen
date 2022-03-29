@@ -1,0 +1,35 @@
+<script id="video-details-view-template" type="text/x-handlebars-template">
+    <div class="video-details-view {{ css.classes.theme }} invisible" id="{{ css.ids.id }}">
+        <div class="app-icon-container">
+            <img class="app-icon" src="{{ images.appIcon }}" alt="App Icon">
+        </div>
+
+        <div class="large-thumbnail-container">
+          <img
+            src="assets/images/placeholder.png"
+            alt="Large thumbnail"
+            class="large-thumbnail" />
+        </div>
+
+        <div class="large-thumbnail-overlay-container">
+          <img
+            src="assets/images/{{ images.overlay }}"
+            alt="thumbnail overlay"
+            class="large-thumbnail-overlay" />
+        </div>
+
+        <div class="video-details-text-container">
+            <div class="video-details-title-container">
+                <h1 class="video-details-title {{ css.classes.theme }} ellipsis-text"></h1>
+            </div>
+
+            <div class="video-details-description-container">
+                <p class="video-details-description {{css.classes.theme}} ellipsis-text"></p>
+            </div>
+        </div>
+
+        <div class="video-details-buttons-container">
+        </div>
+
+    </div>
+</script>
